@@ -1,16 +1,44 @@
 body{
-	background-color: #888888;
+	background-color: #98b8d1;
 }
 #about{
-	background-color: #AAAAAA;
-	margin: 0 5% 0 5%;
+	background-color: #B4DDE1;
+	box-shadow: 10px 10px 5px #43647c;
 
 }
 
+div {
+	border-radius: 5px;
+}
 
+#portfolio0{
+	background-color: #B4DDE1;
+	margin-top: 5px;
+	box-shadow: 10px 10px 5px #43647c;
 
+}
+#portfolio1{
+	background-color: #B4DDE1;
+	box-shadow: 10px 10px 5px #43647c;
 
+}
+#sideNote{
+	text-align: right;
 
+}
+.proj{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	display: block;
+	margin: 0 auto;
+}
+.projDes{
+	text-align: center;
+}
+.footer{
+  width: 100%;
+}
 
 .navbar-default {
 	border-radius: 3px;
