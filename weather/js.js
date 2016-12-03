@@ -86,7 +86,7 @@ $(document).ready(function(e) {
     //
     // });
     $.ajax({
-      url : "http://api.wunderground.com/api/27f3d2ce627602ed/geolookup/conditions/q/"+state+"/"+city+".json",
+      url : "https://api.wunderground.com/api/27f3d2ce627602ed/geolookup/conditions/q/"+state+"/"+city+".json",
       dataType : "jsonp",
       success : function(parsed_json) {
         var location = parsed_json['location']['city'];
