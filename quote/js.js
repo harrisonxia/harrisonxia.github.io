@@ -18,7 +18,7 @@ $(document).ready(function(e) {
   //   alert("textStatus: "+textStatus+"  errorThrown:  "+ errorThrown)});
   //
     $.ajax( {
-      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=30',
+      url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=30',
       success: function(a) {
         $("#quoteBox").append(a[0].content + "<p>— " + a[0].title + "</p>");
         for(var i=0; i<30; i++){
