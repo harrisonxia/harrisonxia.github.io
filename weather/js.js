@@ -2,14 +2,12 @@ $(document).ready(function(e) {
   var city = "";
   var temp = "";
   $.when(
-    $.get("https://crossorigin.me/http://ip-api.com/json", function (response) {
+    $.get("https://ipinfo.io", function (response) {
       //$("#ip").html("IP: " + response.ip);
-      alert(response.city);
-      alert(response.region);
       $("#address").html("Hi there, friend from " + response.city + ", " + response.region);
-      city = response.city.replace(/ /g,'_');
+      city = response.city.replace(/ /g,'');
       $("#details").html(JSON.stringify(response, null, 4));
-    }, "json")
+    }, "jsonp")
   ).done(function(){
     $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric"+"&APPID=979f2ca628b06aa6cf0e93f4427eec60",function(data){
       $("#mainweather").html(JSON.parse(JSON.stringify(data.weather[0].main)));
