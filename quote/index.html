@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wiki Viewer </title>
+  <title>Random Quote Machine</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -21,28 +21,27 @@
   <script language="JavaScript" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script language="JavaScript" type="text/javascript" src="js.js"></script>
 
-  <div>
-    <div id="title_wrapper" class="text-primary">
-      <h1 id="title">
-        Wikipedia Search Tool</h1>
-        <h3 id="subtitle">
-          Reinventing the Wheel.
-        </h3>
-      </div>
-      <div id="search">
-        <input type="input" id="searchText" size="40" placeholder="Type in what you want to search for here."/>
-        <br>
-        <br>
-        <div class="row">
-          <input id="butt" class="btn btn-primary" type="button" value="Search"/>
-          <form id="lucky" action="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
-            <input class="btn btn-primary" type="submit" value="I'm Feeling Lucky." />
-          </form>
-        </div>
-      </div>
-      <div id = "stage">
-      </div>
+  <div class="cont">
+    <h1 id="title" class="text-primary"> Random Quote Machine</h1>
+  </div>
+  <div class="quote clearfix">
+    <blockquote id="quoteBox" class=text-primary> </blockquote>
 
-    </div>
+    <a href="#" id="ahref"><button class="btn btn-sm" id="tweet"><img src="http://i67.tinypic.com/abhzk2.png" width="15px" height="15px">
+
+      Tweet About It
+    </button></a>
+    <button class="btn btn-sm" id="butt">Enlighten Again</button>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">Designed By: Harrison Xia</p>
+      <p class="text-muted">Contact: <a href="mailto:engcxia@gmail.com">
+        eng.cxia@gmail.com</a>.</p>
+      </div>
+    </footer>
+
   </body>
   </html>
