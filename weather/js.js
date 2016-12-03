@@ -70,7 +70,7 @@ $(document).ready(function(e) {
     $.get("https://ipinfo.io", function (response) {
       //$("#ip").html("IP: " + response.ip);
       $("#address").html("Hi there, friend from " + response.city + ", " + response.region);
-      city = response.city.replace(/ /g,'_');
+        city = response.city.replace(/ /g,'_');
       state = abbrState(response.region);
       loc = response.loc;
       $("#details").html(JSON.stringify(response, null, 4));
@@ -94,7 +94,9 @@ $(document).ready(function(e) {
         var weather = parsed_json['current_observation']['weather'];
         $("#mainweather").html(weather);
         $("#degree").html(temp +" C");
-        $("#icon").attr("src",parsed_json['current_observation']['icon_url']);
+        var url = parsed_json['current_observation']['icon_url'].replace('http','https');
+
+        $("#icon").attr("src",url);
       }
     });
 
