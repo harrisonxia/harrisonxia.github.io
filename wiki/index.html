@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script language="JavaScript" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="js.js"></script>
+
+  <div>
+    <div id="title_wrapper" class="text-primary">
+      <h1 id="title">
+        Wikipedia Search Tool</h1>
+        <h3 id="subtitle">
+          Reinventing the Wheel.
+        </h3>
+      </div>
+      <div id="search">
+        <input type="input" id="searchText" size="40" placeholder="Type in what you want to search for here."/>
+        <br>
+        <br>
+        <div class="row">
+          <input id="butt" class="btn btn-primary" type="button" value="Search"/>
+          <form id="lucky" action="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+            <input class="btn btn-primary" type="submit" value="I'm Feeling Lucky." />
+          </form>
+        </div>
+      </div>
+      <div id = "stage">
+      </div>
+
+    </div>
+  </body>
+  </html>
