@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Twitch: Who's Live?</title>
+  <title>How's Weather Today?</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar">
   <link rel="stylesheet" type="text/css" href="style.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
 
 </head>
 <body>
@@ -21,15 +21,32 @@
   <script language="JavaScript" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script language="JavaScript" type="text/javascript" src="js.js"></script>
 
-  <div id="title">
-    <h1 class="text-primary well well-sm">
-      Check who's live here.
-    </h1>
-  </div>
 
-  <div id="context">
-    <div class="well well-sm" id="meat">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 title text-primary">
+        <h1 style="text-align:center"> Local Weather Today </h1>
+      </div>
+      <div class="col-md-2"></div>
+
     </div>
+    <div class="row" style="text-align:center">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 weather">
+        <p id="address"></p>
+        <p id="ip"></p>
+        <p id="mainweather"></p>
+        <img id="icon" src="#" style="height: 60px;">
+
+        <p id="degree"></p>
+
+        <button class="btn btn-primary" id="cng">Change Unit</button>
+      </div>
+      <div class="col-md-2"></div>
+
+    </div>
+
   </div>
 
   <footer class="footer">
