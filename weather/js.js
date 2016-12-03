@@ -2,14 +2,14 @@ $(document).ready(function(e) {
   var city = "";
   var temp = "";
   $.when(
-    $.get("http://ipinfo.io", function (response) {
+    $.get("https://ipinfo.io", function (response) {
       //$("#ip").html("IP: " + response.ip);
       $("#address").html("Hi there, friend from " + response.city + ", " + response.region);
       city = response.city.replace(/ /g,'');
       $("#details").html(JSON.stringify(response, null, 4));
     }, "jsonp")
   ).done(function(){
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric"+"&APPID=979f2ca628b06aa6cf0e93f4427eec60",function(data){
+    $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric"+"&APPID=979f2ca628b06aa6cf0e93f4427eec60",function(data){
       $("#mainweather").html(JSON.parse(JSON.stringify(data.weather[0].main)));
       temp = Math.round(JSON.parse(JSON.stringify(data.main.temp)) * 10) / 10;
       $("#degree").html(temp +" C");
