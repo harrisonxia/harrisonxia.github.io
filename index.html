@@ -4,25 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Harrsion's Personal Site</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <nav class="navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Harrison's</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#portfolio0">Portfolio</a></li>
-        <li><a href="#foot">Contacts</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Google Analytics -->
+  <script src="google.js"></script>
+  <div class="navTemplate"></div>
 
 </head>
 
@@ -31,20 +21,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <br>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.navTemplate').load("nav.html");
+    });
+  </script>
   <div class="container" id="about">
     <div class="row">
       <div class="text-primary col-xs-8">
         <br>
+        Work in Progree: Below is placeholder:<br>
         Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.
         <br>
         Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.
         <br>
         <br>
         Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.
-
-
-
       </div>
       <div class="text-primary col-md-4">
         <br>
@@ -91,7 +83,7 @@
 
   <br>
 
-  <footer class="footer" id="foot">
+  <footer class="footer" id="contacts">
     <div class="container">
       <p class="text-muted">Designed By: Harrison Xia</p>
       <p class="text-muted">Contact: <a href="mailto:engcxia@gmail.com">

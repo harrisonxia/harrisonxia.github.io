@@ -40,8 +40,15 @@ div {
   width: 100%;
 }
 
+.portLink{
+	color: #ecf0f1 !important;
+}
+.dropdown-menu{
+	background-color: #5EA5E0;
+}
+
 .navbar-default {
-	border-radius: 3px;
+	border-radius: 5px;
   background-color: #5ea5e0;
   border-color: #b4dde1;
 }

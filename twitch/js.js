@@ -1,7 +1,7 @@
 $(document).ready(function(e) {
   function apiCall(chan){
     $.ajax({
-      url: 'https://wind-bow.hyperdev.space/twitch-api/streams/'+chan,
+      url: 'https://wind-bow.gomix.me/twitch-api/streams/'+chan,
       dataType: 'jsonp',
       success: function(data){
         var text = "";
