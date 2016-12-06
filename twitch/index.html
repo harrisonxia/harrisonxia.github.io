@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <!-- Google Analytics -->
   <script src="../google.js"></script>
+  <div class="navTemplate"></div>
 
 
 </head>
@@ -22,7 +23,11 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script language="JavaScript" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script language="JavaScript" type="text/javascript" src="js.js"></script>
-
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.navTemplate').load("nav.html");
+    });
+  </script>
   <div id="title">
     <h1 class="text-primary well well-sm">
       Check who's live here.
