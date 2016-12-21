@@ -29,32 +29,32 @@
     });
   </script>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8 title text-primary">
-        <h1 style="text-align:center"> Local Weather Today </h1>
-      </div>
-      <div class="col-md-2"></div>
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Winter is coming!</strong> Stay warm my friend!
+  </div>
 
-    </div>
+  <div class="container">
     <div class="row" style="text-align:center">
       <div class="col-md-2"></div>
       <div class="col-md-8 weather">
         <p id="address"></p>
-        <p id="ip"></p>
-        <p id="mainweather"></p>
-        <img id="icon" src="#" style="height: 60px;">
+        <hr>
+        <p>Current Weather</p>
+        <p style="font-size:85%" id="mainweather"></p>
+        <img id="icon" src="#" style="height: 80px;">
 
         <p id="degree"></p>
-
+        <p style="font-size:85%" id="feelsLike"></p>
+        <p style="font-size:50%" id="observation_time"></p>
         <button class="btn btn-primary" id="cng">Change Unit</button>
+        <button class="btn btn-info" id="detailForcast">Detailed Forcast</button>
       </div>
       <div class="col-md-2"></div>
-
     </div>
 
   </div>
+
 
   <footer class="footer">
     <div class="container">

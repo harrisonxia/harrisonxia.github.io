@@ -66,9 +66,9 @@ $(document).ready(function(e) {
   var temp = "";
   var state = "";
   var loc = "";
+  var detailLink;
   $.when(
     $.get("https://ipinfo.io", function (response) {
-      //$("#ip").html("IP: " + response.ip);
       $("#address").html("Hi there, friend from " + response.city + ", " + response.region);
         city = response.city.replace(/ /g,'_');
       state = abbrState(response.region);
@@ -97,6 +97,13 @@ $(document).ready(function(e) {
         var url = parsed_json['current_observation']['icon_url'].replace('http','https');
 
         $("#icon").attr("src",url);
+
+        var observation_time = parsed_json['current_observation']['observation_time'];
+        $("#observation_time").html(observation_time);
+        var feelslike_string = parsed_json['current_observation']['feelslike_string'];
+        $("#feelsLike").html("Feels Like "+feelslike_string);
+
+        detailLink = parsed_json['current_observation']['forecast_url'];
       }
     });
 
@@ -114,5 +121,10 @@ $(document).ready(function(e) {
       i=0;
     }
   });
+
+  $('#detailForcast').click(function() {
+  window.open(detailLink,'_blank');
+});
+
 
 });
