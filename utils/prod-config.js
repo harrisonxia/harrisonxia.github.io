@@ -13,7 +13,7 @@ module.exports = {
         'app': './index.jsx',
     },
     output: {
-        path: path.resolve(__dirname, '../../docs/'),
+        path: path.resolve(__dirname, '../docs/'),
         filename: 'app.[hash].js',
     },
     devtool: 'cheap-module-source-map',
