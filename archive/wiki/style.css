@@ -1,0 +1,21 @@
+form {
+    display: inline;
+}
+
+
+#title_wrapper{
+  margin: 5%;
+  text-align: center;
+  font-family: 'Eczar', serif;
+
+}
+#search{
+  text-align:center;
+}
+#stage{
+  margin: 5% 20% 10% 20%;
+  border-radius: 10px;
+  border: 3px solid #EAD2D2;
+  text-algin: center;
+  color: #6b8cbc;
+}
