@@ -1,10 +1,11 @@
 {
-  "name": "clean-webpack-react-starter-kit",
+  "name": "harrison-personal-website",
   "version": "2.0.0",
-  "description": "Clean Webpack React Starter Kit",
+  "description": "harrison-personal-website",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
+    "s": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -49,12 +50,11 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "google-map-react": "^1.1.5",
     "lodash": "^4.17.15",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.1.1",
+    "react95": "^2.0.0",
     "styled-components": "^4.4.0"
   }
 }
