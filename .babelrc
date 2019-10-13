@@ -1,3 +1,19 @@
 {
-  "presets": ["env", "react", "stage-3"]
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-flow"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-class-properties"
+    ],
+    [
+      "react-css-modules",
+      {
+        "webpackHotModuleReloading": true,
+        "autoResolveMultipleImports": false
+      }
+    ]
+  ]
 }
