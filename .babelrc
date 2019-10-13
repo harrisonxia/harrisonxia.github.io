@@ -7,6 +7,13 @@
   "plugins": [
     [
       "@babel/plugin-proposal-class-properties"
+    ],
+    [
+      "react-css-modules",
+      {
+        "webpackHotModuleReloading": true,
+        "autoResolveMultipleImports": false
+      }
     ]
   ]
 }

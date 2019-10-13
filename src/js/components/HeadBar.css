@@ -1,0 +1,34 @@
+.headerBar {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: space-around;*/
+    /*flex-wrap: wrap;*/
+    margin-bottom: 5rem;
+    z-index: 100;
+}
+
+.toolBar {
+    position: relative;
+}
+
+.headerButtonGroup {
+    display: flex;
+}
+
+.startButton {
+    font-weight: 900;
+    font-family: 'VT323', monospace;
+}
+
+.buttonText {
+    font-family: 'VT323', monospace;
+    margin: 0 3rem;
+}
+
+.verticalLine {
+    margin: 0 1rem !important;
+}
+
+.toolTipOverflow {
+    transform: translate(-10%,100%) !important;
+}

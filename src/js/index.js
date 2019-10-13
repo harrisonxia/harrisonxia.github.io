@@ -4,7 +4,6 @@ import {Provider} from 'react-redux'
 import {Route, Switch, Redirect, BrowserRouter as Router} from 'react-router-dom'
 import store from './store/index.js'
 import App from './components/App.jsx'
-
 const defaultPath = '/'
 render(
     <Provider store={store}>

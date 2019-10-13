@@ -1,21 +1,36 @@
 import * as React from 'react'
-import List from './List.jsx'
-import Form from './Form.jsx'
-import Post from './Posts.jsx'
+import Header from './HeadBar.jsx'
+import Intro from './Window.jsx'
+import Experience from './WindowWithTab.jsx'
+import Project from './Project.jsx'
+import {Element} from 'react-scroll'
+import './App.css'
+
 const App = () => (
-  <div className="row mt-5">
-    <div className="col-md-4 offset-md-1">
-      <h2>Articles</h2>
-      <List />
+    // Background Photo by Pero Kalimero on Unsplash
+    <div styleName='mainDiv'>
+        <Header/>
+
+        <div styleName='mainContainer'>
+            <div styleName='windowContainer'>
+                <Element name='intro'>
+                    <Intro/>
+                </Element>
+            </div>
+
+            <div styleName='windowContainer'>
+                <Element name='experience'>
+                    <Experience/>
+                </Element>
+            </div>
+
+            <div styleName='windowContainer'>
+                <Element name='project'>
+                    <Project/>
+                </Element>
+            </div>
+        </div>
     </div>
-    <div className="col-md-4 offset-md-1">
-      <h2>Add a new article</h2>
-      <Form />
-    </div>
-    <div className="col-md-4 offset-md-1">
-      <h2>API posts</h2>
-      <Post />
-    </div>
-  </div>
 )
+
 export default App

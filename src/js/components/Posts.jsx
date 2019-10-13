@@ -24,7 +24,7 @@ export class Post extends Component {
 }
 function mapStateToProps(state) {
   return {
-    articles: state.remoteArticles.slice(0, 10)
+    articles: state.remoteArticles.slice(0, 100)
   }
 }
 export default connect(

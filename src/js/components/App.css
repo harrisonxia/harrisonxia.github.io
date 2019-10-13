@@ -1,0 +1,19 @@
+.mainDiv {
+    background: url('https://raw.githubusercontent.com/harrisonxia/harrisonxia.github.io/master/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer {
+    margin: 0 3rem 3rem 3rem;
+}
+
+.windowContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10% 0;
+}
