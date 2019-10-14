@@ -13,7 +13,8 @@ import {
     Hourglass,
     Tooltip
 } from 'react95'
-import styles from './HeadBar.css'
+import styles from '../../css/HeadBar.css'
+import {openExternal, scrollNext} from './Window.jsx'
 // const ResetStyles = createGlobalStyle`
 //   ${reset}
 // `
@@ -32,10 +33,12 @@ function Menu() {
         <div>
             {open && (
                 <List horizontalAlign="left" verticalAlign="bottom" open={open} onClick={handleClose}>
-                    <ListItem>👨‍💻 Profile</ListItem>
-                    <ListItem>📁 My account</ListItem>
+                    <ListItem onClick={()=>scrollNext('intro', -150)}>👨‍💻 Profile</ListItem>
+                    <ListItem onClick={()=>scrollNext('techStack', -150)}>💽 Tech Stack</ListItem>
+                    <ListItem onClick={()=>scrollNext('experience', -150)}>💼 Experience</ListItem>
+                    <ListItem onClick={()=>scrollNext('project', -150)}>⌨️ Projects</ListItem>
                     <Divider/>
-                    <ListItem disabled>🔙 Logout</ListItem>
+                    <ListItem onClick={()=>scrollNext('projectUrls', -150)}>🔗 Project Links</ListItem>
                 </List>
             )}
             <Button onClick={handleClick} active={open} styleName='startButton'>
@@ -56,11 +59,12 @@ const Header = () =>
                     <Menu/>
                     <Divider vertical size="lg" styleName='verticalLine'/>
                     <div styleName='headerButtonGroup'>
-                        <Button onClick={()=>location.href='https://github.com/harrisonxia'}><span styleName='buttonText'>Github</span></Button>
-                        <Button onClick={()=>location.href='https://www.linkedin.com/in/harrison-xia'}><span styleName='buttonText'>LinkedIn</span></Button>
-                        <Button><span styleName='buttonText'>Contact</span></Button>
-                        <Button><span styleName='buttonText'>Resume</span></Button>
-                        <Button><span styleName='buttonText'>Project</span></Button>
+                        <Button onClick={()=>openExternal('https://github.com/harrisonxia')}><span styleName='buttonText'>Github</span></Button>
+                        <Button onClick={()=>openExternal('https://www.linkedin.com/in/harrison-xia')}><span styleName='buttonText'>LinkedIn</span></Button>
+                        {/*<Button><span styleName='buttonText'>Resume</span></Button>*/}
+                        <Button onClick={()=>scrollNext('experience', -150)}><span styleName='buttonText'>Experience</span></Button>
+                        <Button onClick={()=>scrollNext('project', -150)}><span styleName='buttonText'>Projects</span></Button>
+                        <Button onClick={()=>openExternal('mailto:engcxia+website@gmail.com?Subject=Hello')}><span styleName='buttonText'>Contact</span></Button>
                     </div>
                     {/*<TextField placeholder="Search..." width={150} style={{marginLeft: 4}}/>*/}
                 </Toolbar>
