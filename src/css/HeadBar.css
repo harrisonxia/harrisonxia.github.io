@@ -22,7 +22,7 @@
 
 .buttonText {
     font-family: 'VT323', monospace;
-    margin: 0 3rem;
+    margin: 0 2rem;
 }
 
 .verticalLine {
@@ -31,4 +31,14 @@
 
 .toolTipOverflow {
     transform: translate(-10%,100%) !important;
+}
+
+@media screen and (max-width: 720px){
+    .headerButtonGroup {
+        flex-direction: row;
+    }
+    .buttonText {
+        flex: 0 0 20vw;
+        margin: 0;
+    }
 }

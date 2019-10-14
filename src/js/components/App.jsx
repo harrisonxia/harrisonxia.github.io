@@ -3,11 +3,13 @@ import Header from './HeadBar.jsx'
 import Intro from './Window.jsx'
 import Experience from './WindowWithTab.jsx'
 import Project from './Project.jsx'
+import UrlList from './UrlList.jsx'
 import {Element} from 'react-scroll'
-import './App.css'
+import TechStack from './TechStack.jsx'
+import '../../css/App.css'
+
 
 const App = () => (
-    // Background Photo by Pero Kalimero on Unsplash
     <div styleName='mainDiv'>
         <Header/>
 
@@ -15,6 +17,12 @@ const App = () => (
             <div styleName='windowContainer'>
                 <Element name='intro'>
                     <Intro/>
+                </Element>
+            </div>
+
+            <div styleName='windowContainer'>
+                <Element name='techStack'>
+                    <TechStack/>
                 </Element>
             </div>
 
@@ -27,6 +35,12 @@ const App = () => (
             <div styleName='windowContainer'>
                 <Element name='project'>
                     <Project/>
+                </Element>
+            </div>
+
+            <div styleName='windowContainer'>
+                <Element name='projectUrls'>
+                    <UrlList/>
                 </Element>
             </div>
         </div>
