@@ -121,3 +121,7 @@ flow-typed/
 flow-stubs/
 
 node_modules/
+
+yarn.lock
+
+yarn-error.log
