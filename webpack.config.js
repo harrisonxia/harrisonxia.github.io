@@ -45,7 +45,9 @@ module.exports = {
                 use: [
                     {
                         loader: 'html-loader',
-                        options: {minimize: true},
+                        options: {
+                            minimize: true,
+                        },
                     },
                 ],
             },
@@ -54,8 +56,11 @@ module.exports = {
                 include: context,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin .loader,
-                        options: {hot: true},
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hot: true,
+                        },
+
                     },
                     {
                         loader: 'css-loader', //generating unique classname
@@ -76,8 +81,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css',
+            filename: '[name].[hash].css',
+            chunkFilename: '[id].[hash].css',
             orderWarning: true,
         }),
         new HtmlWebPackPlugin({
@@ -86,6 +91,10 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.SourceMapDevToolPlugin(),
-
     ],
+    output: {
+        path: path.resolve(__dirname, 'docs'),
+        filename: '[name].[hash].js',
+        publicPath: '/',
+    },
 }

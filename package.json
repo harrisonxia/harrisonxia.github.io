@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "s": "webpack-dev-server --open --mode development",
-    "dev": "webpack --mode development --module-bind js=babel-loader",
-    "build": "webpack --mode production --module-bind js=babel-loader"
+    "dev": "webpack --mode development --output ./devDist/main.js",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
