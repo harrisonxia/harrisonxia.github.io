@@ -6,7 +6,6 @@ import {
     WindowHeader,
     Fieldset,
     Radio,
-    Progress,
     Tooltip,
     reset,
     themes,
@@ -63,7 +62,6 @@ const Intro = () => (
                                     <div styleName='styles.eduTextLong'>Master of Science in Computer Science (Big
                                         Data)
                                     </div>
-                                    {/*<Progress shadow={true} width={80} percent={95}/>*/}
                                 </div>
                                 <br/>
                             </div>
@@ -78,7 +76,6 @@ const Intro = () => (
                             />
                             <div styleName='styles.textProcess'>
                                 <div styleName='styles.eduText'>Bachelor of Science in Computer Science</div>
-                                {/*<Progress shadow={true} width={80} percent={100}/>*/}
                             </div>
                             <br/>
                         </div>
