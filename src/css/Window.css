@@ -16,8 +16,8 @@
 
 .textProcess {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    align-items: end;
+    flex-direction: column;
 }
 
 .eduText {
@@ -25,7 +25,7 @@
 }
 
 .eduTextLong {
-    margin: 0 3rem;
+    margin: 0.5rem 1rem 0 3rem;
 }
 
 .buttonGroup {
@@ -38,6 +38,11 @@
 .nameInline {
     font-size: 1.25rem;
     font-weight: 900;
+}
+
+.schoolInline {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .listText {

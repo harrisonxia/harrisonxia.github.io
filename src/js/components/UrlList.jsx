@@ -8,14 +8,17 @@ import {
     Select,
     themes, Fieldset, TabBody,
 } from 'react95'
-import {createGlobalStyle, ThemeProvider} from 'styled-components'
-import {scrollNext, openExternal} from './Window.jsx'
-import {scroller} from 'react-scroll'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { scrollNext, openExternal } from './Window.jsx'
+import { scroller } from 'react-scroll'
 import styles from '../../css/Window.css'
 
 const items = [
     {
-        value: 'https://www.devxia.com/Lil-Data/', label: 'Gaming and Streaming Industry Analysis',
+        value: 'https://gendergap.devxia.com/', label: 'Global Gender Gap Exploration Tool',
+    },
+    {
+        value: 'https://gaming.devxia.com/', label: 'Gaming and Streaming Industry Analysis',
     },
     {
         value: 'https://www.devxia.com/crouching_tigers', label: 'IoT devices Predictive Maintenance and Management',
@@ -33,15 +36,15 @@ const UrlList = () => (
                 <WindowContent>
                     <Fieldset>
                         <div styleName='styles.radioProcess'>
-                            Projects details and Github links are listed above.
+                            Select a name to get redirected to the project page.
                         </div>
                     </Fieldset>
-                    <br/>
+                    <br />
                     <Fieldset label="Direct link to all projects live.">
                         <div styleName='styles.radioProcess'>
                             <Select items={items} onChange={(value) => openExternal(value)}
-                                    styleName='styles.projectUrl'/>
-                            <br/>
+                                styleName='styles.projectUrl' />
+                            <br />
                         </div>
                     </Fieldset>
                 </WindowContent>

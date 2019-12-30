@@ -11,8 +11,8 @@ import {
     themes,
     Button, ListItem, Divider, List,
 } from 'react95'
-import {createGlobalStyle, ThemeProvider} from 'styled-components'
-import {openExternal, scrollNext} from './Window.jsx'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { openExternal, scrollNext } from './Window.jsx'
 import styles from '../../css/Window.css'
 
 const ResetStyles = createGlobalStyle`
@@ -23,6 +23,7 @@ class Project extends React.Component {
     state = {
         activeTab: 0,
         tabTitles: [
+            'Global Gender Gap Exploration Tool',
             'Predictive Maintenance',
             'Gaming Analysis',
             'AI Fashion Designer',
@@ -30,12 +31,13 @@ class Project extends React.Component {
         ],
     }
     handleChange = value => {
-        this.setState({activeTab: value})
+        this.setState({ activeTab: value })
         switch (value) {
             case 0:
                 this.setState({
                     tabTitles: [
-                        'IoT devices Predictive Maintenance and Management',
+                        'Global Gender Gap Exploration Tool',
+                        'Predictive Maintenance',
                         'Gaming Analysis',
                         'AI Fashion Designer',
                         'Hackathon',
@@ -45,9 +47,10 @@ class Project extends React.Component {
             case 1:
                 this.setState({
                     tabTitles: [
-                        'Predictive Maintenance',
-                        'Gaming and Streaming Industry Analysis',
-                        'AI Designer',
+                        'Gender Gap',
+                        'IoT devices Predictive Maintenance and Management',
+                        'Gaming Analysis',
+                        'AI Fashion Designer',
                         'Hackathon',
                     ],
                 })
@@ -55,9 +58,10 @@ class Project extends React.Component {
             case 2:
                 this.setState({
                     tabTitles: [
+                        'Gender Gap',
                         'Predictive Maintenance',
-                        'Gaming Analysis',
-                        'AI Fashion Designer',
+                        'Gaming and Streaming Industry Analysis',
+                        'AI Designer',
                         'Hackathon',
                     ],
                 })
@@ -65,6 +69,18 @@ class Project extends React.Component {
             case 3:
                 this.setState({
                     tabTitles: [
+                        'Gender Gap',
+                        'Predictive Maintenance',
+                        'Gaming Analysis',
+                        'AI Fashion Designer',
+                        'Hackathon',
+                    ],
+                })
+                break
+            case 4:
+                this.setState({
+                    tabTitles: [
+                        'Gender Gap',
                         'Predictive Maintenance',
                         'Gaming Analysis',
                         'AI Designer',
@@ -77,10 +93,10 @@ class Project extends React.Component {
     }
 
     render() {
-        const {activeTab} = this.state
+        const { activeTab } = this.state
         return (
             <div>
-                <ResetStyles/>
+                <ResetStyles />
                 <ThemeProvider theme={themes.water}>
                     <Window styleName='styles.windowSpacing'>
                         <WindowHeader styleName='styles.windowHeader'>🤩 Projects.exe</WindowHeader>
@@ -90,12 +106,45 @@ class Project extends React.Component {
                                 <Tab value={1}>{this.state.tabTitles[1]}</Tab>
                                 <Tab value={2}>{this.state.tabTitles[2]}</Tab>
                                 <Tab value={3}>{this.state.tabTitles[3]}</Tab>
+                                <Tab value={4}>{this.state.tabTitles[4]}</Tab>
                             </Tabs>
                             <div>
                                 {activeTab === 0 && (
                                     <TabBody>
                                         <Fieldset>
-                                            Jan 2019 – Apr 2019
+                                            Sep 2019 -- Nov 2019
+                                            <ul styleName='listText'>
+                                                <li styleName='itemText'>
+                                                    Implemented the EDA tool with React, Redux, responsively visualizing over 20,000 data points.
+                                                </li>
+                                                <li styleName='itemText'>
+                                                    Developed data extraction and transformation (ETL) pipeline using Python pandas.                        </li>
+                                                <li styleName='itemText'>
+                                                    Designed the user experience and interaction choices, enabling full exploration of the dataset.
+                                                </li>
+                                                <li styleName='itemText'> Technology: JavaScript, React, Redux, D3.js, pandas, Python
+                                                </li>
+                                            </ul>
+                                            <List inline={true} horizontalAlign="left" verticalAlign="bottom" open={true}>
+                                                <ListItem as="a" href="https://gendergap.devxia.com" target="_blank">👨‍💻 Check it out!</ListItem>
+                                                <Divider />
+                                                <ListItem as="a" href="https://github.com/harrisonxia/Global-Gender-Gap-Exploration-Tool" target="_blank">📁 Github</ListItem>
+                                            </List>
+                                            {/*<Button*/}
+                                            {/*    onClick={() => openExternal('https://www.devxia.com/crouching_tigers')}>*/}
+                                            {/*    <span>Check out this project! [backend servers turned off]</span>*/}
+                                            {/*</Button>*/}
+                                            {/*<Button*/}
+                                            {/*    onClick={() => openExternal('https://github.com/harrisonxia/Predictive-Maintenance')}>*/}
+                                            {/*    <span>Check code on Github!</span>*/}
+                                            {/*</Button>*/}
+                                        </Fieldset>
+                                    </TabBody>
+                                )}
+                                {activeTab === 1 && (
+                                    <TabBody>
+                                        <Fieldset>
+                                            Jan 2019 -– Apr 2019
                                             <ul styleName='listText'>
                                                 <li styleName='itemText'>
                                                     Performed ETL, EDA as well as data preparation.
@@ -116,7 +165,7 @@ class Project extends React.Component {
                                             </ul>
                                             <List inline={true} horizontalAlign="left" verticalAlign="bottom" open={true}>
                                                 <ListItem as="a" href="https://www.devxia.com/crouching_tigers" target="_blank">👨‍💻 Check it out! [servers off]</ListItem>
-                                                <Divider/>
+                                                <Divider />
                                                 <ListItem as="a" href="https://github.com/harrisonxia/Predictive-Maintenance" target="_blank">📁 Github</ListItem>
                                             </List>
                                             {/*<Button*/}
@@ -130,10 +179,10 @@ class Project extends React.Component {
                                         </Fieldset>
                                     </TabBody>
                                 )}
-                                {activeTab === 1 && (
+                                {activeTab === 2 && (
                                     <TabBody>
                                         <Fieldset>
-                                            Apr 2017 – Aug 2018
+                                            Apr 2017 -– Aug 2018
                                             <ul styleName='listText'>
                                                 <li styleName='itemText'> Analyzed the growth and trends in the gaming
                                                     industry fetching data from various APIs.
@@ -153,7 +202,7 @@ class Project extends React.Component {
                                             </ul>
                                             <List inline={true} horizontalAlign="left" verticalAlign="bottom" open={true}>
                                                 <ListItem as="a" href="https://www.devxia.com/Lil-Data/" target="_blank">👨‍💻 Check out this project live!</ListItem>
-                                                <Divider/>
+                                                <Divider />
                                                 <ListItem as="a" href="https://github.com/harrisonxia/Lil-Data" target="_blank">📁 And it's on Github!</ListItem>
                                             </List>
                                             {/*<Button*/}
@@ -168,10 +217,10 @@ class Project extends React.Component {
                                         </Fieldset>
                                     </TabBody>
                                 )}
-                                {activeTab === 2 && (
+                                {activeTab === 3 && (
                                     <TabBody>
                                         <Fieldset>
-                                            Oct 2018 – Dec 2018
+                                            Oct 2018 -– Dec 2018
                                             <ul styleName='listText'>
                                                 <li styleName='itemText'> Applied and trained DCGAN model to generate
                                                     original and innovative fashion patterns.
@@ -196,15 +245,15 @@ class Project extends React.Component {
                                         </Fieldset>
                                     </TabBody>
                                 )}
-                                {activeTab === 3 && (
+                                {activeTab === 4 && (
                                     <TabBody>
                                         <Fieldset>
                                             <ul styleName='listText'>
                                                 <li styleName='itemText'> Open Government Partnership Global Summit
                                                     Hackathon, Ottawa May 2019
-                                                    <br/>o Analyzed and created transport, safety, economy indicators
+                                                    <br />o Analyzed and created transport, safety, economy indicators
                                                     for 9 cities in Canada.
-                                                    <br/>o Implemented web frontend and visualization
+                                                    <br />o Implemented web frontend and visualization
                                                     <Button
                                                         onClick={() => openExternal('https://www.devxia.com/Stats-In-A-Can/')}>
                                                         <span>Check out this project live!</span>
@@ -215,11 +264,11 @@ class Project extends React.Component {
                                                     </Button>
                                                 </li>
                                                 <li styleName='itemText'> DeloitteAIHacks, Vancouver Sep 2019
-                                                    <br/>o Prepared the data and built data model to make suggestions
+                                                    <br />o Prepared the data and built data model to make suggestions
                                                     for K-12inBC.
                                                 </li>
                                             </ul>
-                                            <br/>
+                                            <br />
                                         </Fieldset>
                                     </TabBody>
                                 )}
