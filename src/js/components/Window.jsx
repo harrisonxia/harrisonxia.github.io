@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {
     Button,
+    Checkbox,
     Window,
     WindowContent,
     WindowHeader,
@@ -10,15 +11,13 @@ import {
     reset,
     themes,
 } from 'react95'
-import {createGlobalStyle, ThemeProvider} from 'styled-components'
-import {scroller} from 'react-scroll'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { scroller } from 'react-scroll'
 import styles from '../../css/Window.css'
 
 const ResetStyles = createGlobalStyle`
   ${reset}
 `
-const dummy = () => {
-}
 
 export const scrollNext = (elementName, offsetNum) => {
     scroller.scrollTo(elementName, {
@@ -37,47 +36,46 @@ export const openExternal = (link) => {
 
 const Intro = () => (
     <div stylename='styles.windowDivLayer}'>
-        <ResetStyles/>
+        <ResetStyles />
         <ThemeProvider theme={themes.water}>
             <Window styleName='styles.windowSpacing'>
                 <WindowHeader styleName='styles.windowHeader'>😎 Hello.exe</WindowHeader>
                 <WindowContent>
                     <Fieldset>
-                        My name is <span styleName='styles.nameInline'>Chuangxin Xia.</span>
-                        <br/><br/>
-                        You can call me <span styleName='styles.nameInline'>Harrison.</span>
+                        Hi, I'm <span styleName='styles.nameInline'>Chuangxin (Harrison) Xia.</span>
+                        <br />
                     </Fieldset>
-                    <br/>
+                    <br />
                     <Fieldset label="Education">
-                        <Tooltip text="I'm finishing up my last term at SFU!‍">
-                            <div styleName='styles.radioProcess'>
-                                <Radio
-                                    checked={true}
-                                    onChange={dummy}
-                                    value="SFU"
-                                    label="🇨🇦 Simon Fraser University"
-                                    name="school"
-                                />
-                                <div styleName='styles.textProcess'>
-                                    <div styleName='styles.eduTextLong'>Master of Science in Computer Science (Big
-                                        Data)
-                                    </div>
-                                </div>
-                                <br/>
-                            </div>
-                        </Tooltip>
                         <div styleName='styles.radioProcess'>
-                            <Radio
-                                checked={false}
-                                onChange={dummy}
+                            <Checkbox checked={true} onChange={() => null}
+                                value="SFU"
+                                label="🇨🇦 Simon Fraser University"
+                                name="school" />
+                            <div styleName='styles.textProcess'>
+                                <div styleName='styles.eduTextLong'>
+                                    Master of Science in Computer Science (Big Data)
+                                </div>
+                                <div styleName='styles.eduTextLong'>
+                                    Sep 2018 -- Dec 2019
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        <hr />
+                        <div styleName='styles.radioProcess'>
+                            <Checkbox
+                                checked={true}
+                                onChange={() => null}
                                 value="UCSD"
                                 label="🇺🇸 University of California San Diego"
                                 name="school"
                             />
                             <div styleName='styles.textProcess'>
-                                <div styleName='styles.eduText'>Bachelor of Science in Computer Science</div>
+                                <div styleName='styles.eduTextLong'>Bachelor of Science in Computer Science</div>
+                                <div styleName='styles.eduTextLong'>Sep, 2012 -- Sep, 2016</div>
                             </div>
-                            <br/>
+                            <br />
                         </div>
                     </Fieldset>
                 </WindowContent>
