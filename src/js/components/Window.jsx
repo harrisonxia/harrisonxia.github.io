@@ -57,7 +57,7 @@ const Intro = () => (
                                     Master of Science in Computer Science (Big Data)
                                 </div>
                                 <div styleName='styles.eduTextLong'>
-                                    Sep 2018 -- Dec 2019
+                                    Sep, 2018 -- Dec, 2019
                                 </div>
                             </div>
                             <br />
