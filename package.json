@@ -4,10 +4,10 @@
   "description": "harrison-personal-website",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "s": "webpack-dev-server --open --mode development",
-    "dev": "webpack --mode development --output ./devDist/main.js",
-    "build": "webpack --mode production"
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open --mode development",
+    "s": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open --mode development",
+    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode development --output ./devDist/main.js",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production"
   },
   "repository": {
     "type": "git",
