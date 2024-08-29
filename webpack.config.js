@@ -35,7 +35,7 @@ module.exports = {
                                     generateScopedName: '[name]__[local]___[hash:base64:5]',
                                 },
                             ],
-                            '@babel/plugin-proposal-class-properties', // https://goo.gl/TE6TyG
+                            '@babel/plugin-transform-class-properties', // https://goo.gl/TE6TyG
                         ],
                     },
                 },
