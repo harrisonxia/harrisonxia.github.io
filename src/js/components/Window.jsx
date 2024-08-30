@@ -8,15 +8,16 @@ import {
     Fieldset,
     Radio,
     Tooltip,
-    reset,
-    themes,
+    styleReset,
 } from 'react95'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { scroller } from 'react-scroll'
 import styles from '../../css/Window.css'
 
+import water from 'react95/dist/themes/water.js';
+
 const ResetStyles = createGlobalStyle`
-  ${reset}
+  ${styleReset}
 `
 
 export const scrollNext = (elementName, offsetNum) => {
@@ -37,7 +38,7 @@ export const openExternal = (link) => {
 const Intro = () => (
     <div stylename='styles.windowDivLayer}'>
         <ResetStyles />
-        <ThemeProvider theme={themes.water}>
+        <ThemeProvider theme={water}>
             <Window styleName='styles.windowSpacing'>
                 <WindowHeader styleName='styles.windowHeader'>😎 Hello.exe</WindowHeader>
                 <WindowContent>

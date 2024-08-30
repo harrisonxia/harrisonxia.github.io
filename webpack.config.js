@@ -57,9 +57,9 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hot: true,
-                        },
+                        // options: {
+                        //     hot: true,
+                        // },
 
                     },
                     {
@@ -97,7 +97,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[hash].css',
             chunkFilename: '[id].[hash].css',
-            orderWarning: true,
+            ignoreOrder: true,
         }),
         new HtmlWebPackPlugin({
             template: './src/index.html',

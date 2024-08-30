@@ -6,13 +6,13 @@ import {
     WindowHeader,
     Tooltip,
     Select,
-    themes, Fieldset, TabBody,
+    Fieldset, TabBody,
 } from 'react95'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { scrollNext, openExternal } from './Window.jsx'
 import { scroller } from 'react-scroll'
 import styles from '../../css/Window.css'
-
+import water from 'react95/dist/themes/water.js';
 const items = [
     {
         value: 'https://gendergap.devxia.com/', label: 'Global Gender Gap Exploration Tool',
@@ -29,7 +29,7 @@ const items = [
 ]
 const UrlList = () => (
     <div>
-        <ThemeProvider theme={themes.water}>
+        <ThemeProvider theme={water}>
             <Window styleName='styles.windowSpacing'>
                 <WindowHeader styleName='styles.windowHeader'>🔗 ProjectLinks.exe</WindowHeader>
 

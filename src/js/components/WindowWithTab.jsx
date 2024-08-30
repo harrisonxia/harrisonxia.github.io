@@ -13,15 +13,16 @@ import {
     List,
     ListItem,
     TextArea,
-    reset,
-    themes, Divider, Radio, Button,
+    styleReset,
+    Divider, Radio, Button,
 } from 'react95'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { openExternal, scrollNext } from './Window.jsx'
 import styles from '../../css/Window.css'
+import water from 'react95/dist/themes/water.js';
 
 const ResetStyles = createGlobalStyle`
-  ${reset}
+  ${styleReset}
 `
 
 class Experience extends React.Component {
@@ -71,7 +72,7 @@ class Experience extends React.Component {
         return (
             <div>
                 <ResetStyles />
-                <ThemeProvider theme={themes.water}>
+                <ThemeProvider theme={water}>
                     <Window styleName='styles.windowSpacing'>
                         <WindowHeader styleName='styles.windowHeader'>💻 Experience.exe</WindowHeader>
                         <WindowContent>

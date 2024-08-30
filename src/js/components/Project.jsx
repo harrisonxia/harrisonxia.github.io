@@ -7,16 +7,15 @@ import {
     Tabs,
     TabBody,
     Fieldset,
-    reset,
-    themes,
+    styleReset,
     Button, ListItem, Divider, List,
 } from 'react95'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { openExternal, scrollNext } from './Window.jsx'
 import styles from '../../css/Window.css'
-
+import water from 'react95/dist/themes/water.js';
 const ResetStyles = createGlobalStyle`
-  ${reset}
+  ${styleReset}
 `
 
 class Project extends React.Component {
@@ -97,7 +96,7 @@ class Project extends React.Component {
         return (
             <div>
                 <ResetStyles />
-                <ThemeProvider theme={themes.water}>
+                <ThemeProvider theme={water}>
                     <Window styleName='styles.windowSpacing'>
                         <WindowHeader styleName='styles.windowHeader'>🤩 Projects.exe</WindowHeader>
                         <WindowContent>

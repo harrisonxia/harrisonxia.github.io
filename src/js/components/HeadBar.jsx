@@ -5,8 +5,6 @@ import {
     AppBar,
     TextField,
     Toolbar,
-    reset,
-    themes,
     List,
     ListItem,
     Divider,
@@ -15,6 +13,7 @@ import {
 } from 'react95'
 import styles from '../../css/HeadBar.css'
 import {openExternal, scrollNext} from './Window.jsx'
+import water from 'react95/dist/themes/water.js';
 // const ResetStyles = createGlobalStyle`
 //   ${reset}
 // `
@@ -53,7 +52,7 @@ function Menu() {
 const Header = () =>
     <div styleName='headerBar'>
         {/*<ResetStyles/>*/}
-        <ThemeProvider theme={themes.water}>
+        <ThemeProvider theme={water}>
             <AppBar>
                 <Toolbar styleName='toolBar'>
                     <Menu/>

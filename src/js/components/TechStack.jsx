@@ -10,11 +10,12 @@ import {
     TableDataCell,
     TableHeadCell,
     Progress,
-    themes, Button,
+    Button,
 } from 'react95'
 import {ThemeProvider} from 'styled-components'
 import styles from '../../css/Window.css'
 import {scrollNext} from './Window.jsx'
+import water from 'react95/dist/themes/water.js';
 
 const fullStar =
     <img
@@ -52,7 +53,7 @@ const getStars = (level) => {
 }
 const TechStack = () => (
     <div stylename='styles.windowDivLayer'>
-        <ThemeProvider theme={themes.water}>
+        <ThemeProvider theme={water}>
             <Window styleName='styles.windowSpacing'>
                 <WindowHeader styleName='styles.windowHeader'>💽 TechStack.exe</WindowHeader>
                 <WindowContent styleName='styles.techStack'>
